@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Hariom Patel — Portfolio</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0f1724; --card:#0b1220; --muted:#94a3b8; --accent:#06b6d4; --glass: rgba(255,255,255,0.04);
+      --radius:16px; --maxw:1000px; --gap:18px;
+    }
+    *{box-sizing:border-box}
+    body{font-family:Inter,system-ui,Segoe UI,Arial; margin:0; background:linear-gradient(180deg,#071126 0%, #081826 100%); color:#e6eef6; -webkit-font-smoothing:antialiased}
+    .wrap{max-width:var(--maxw); margin:36px auto; padding:28px;}
+
+    header{display:flex;align-items:center;justify-content:space-between;gap:12px}
+    .brand{display:flex;align-items:center;gap:12px}
+    .logo{width:54px;height:54px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#7c3aed);display:flex;align-items:center;justify-content:center;font-weight:700}
+    .brand h1{font-size:18px;margin:0}
+    nav a{color:var(--muted);text-decoration:none;margin-left:18px;font-weight:600}
+
+    .grid{display:grid;grid-template-columns:1fr 360px;gap:var(--gap);margin-top:28px}
+    .card{background:var(--card);padding:20px;border-radius:var(--radius);box-shadow:0 6px 18px rgba(2,6,23,0.6);}
+
+    /* Hero */
+    .hero{padding:28px 20px;display:flex;flex-direction:column;gap:14px}
+    .hero h2{margin:0;font-size:28px}
+    .hero p{color:var(--muted);margin:0;line-height:1.5}
+    .cta{margin-top:8px}
+    .btn{display:inline-block;padding:10px 14px;border-radius:12px;background:linear-gradient(90deg,var(--accent),#7c3aed);color:#021025;text-decoration:none;font-weight:700}
+
+    /* Skills */
+    .skills{display:flex;flex-wrap:wrap;gap:10px;margin-top:12px}
+    .skill{background:var(--glass);padding:8px 10px;border-radius:10px;color:var(--muted);font-weight:600}
+
+    /* Projects list */
+    .projects{display:grid;gap:14px;margin-top:14px}
+    .project{display:flex;flex-direction:column;background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);padding:14px;border-radius:12px}
+    .proj-head{display:flex;align-items:center;justify-content:space-between}
+    .proj-title{font-weight:700}
+    .proj-desc{color:var(--muted);margin-top:8px}
+    .tags{display:flex;gap:8px;margin-top:10px}
+    .tag{background:rgba(255,255,255,0.03);padding:6px 8px;border-radius:8px;color:var(--muted);font-size:13px}
+
+    /* Sidebar */
+    .profile{display:flex;flex-direction:column;align-items:center;gap:12px;text-align:center}
+    .avatar{width:120px;height:120px;border-radius:18px;background:linear-gradient(135deg,#334155,#0ea5a7);display:flex;align-items:center;justify-content:center;font-size:36px;font-weight:700}
+    .about{color:var(--muted);font-size:14px}
+    .contact-list{display:flex;flex-direction:column;gap:8px;margin-top:8px}
+    .contact-item{background:rgba(255,255,255,0.03);padding:8px;border-radius:10px;color:var(--muted);font-weight:600}
+
+    footer{text-align:center;color:var(--muted);margin-top:22px;font-size:13px}
+
+    /* responsive */
+    @media (max-width:880px){
+      .grid{grid-template-columns:1fr;}
+      nav{display:none}
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <div class="logo">HP</div>
+        <div>
+          <h1>Hariom Patel</h1>
+          <div style="color:var(--muted);font-size:13px">Web Developer • Full-stack learner</div>
+        </div>
+      </div>
+      <nav>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <div class="grid">
+      <main class="card">
+        <section class="hero">
+          <h2>Hi, I'm Hariom — building clean web experiences.</h2>
+          <p>I’m a 3rd-year engineering student who loves web development and problem solving. I build small projects to practise JavaScript, HTML, CSS and backend basics.</p>
+          <div class="skills" id="skills">
+            <span class="skill">HTML</span>
+            <span class="skill">CSS</span>
+            <span class="skill">JavaScript</span>
+            <span class="skill">React (learning)</span>
+            <span class="skill">Node.js</span>
+            <span class="skill">Git</span>
+          </div>
+          <div class="cta">
+            <a class="btn" href="#projects">See projects</a>
+          </div>
+        </section>
+
+        <section id="projects" class="projects">
+          <div class="project">
+            <div class="proj-head">
+              <div class="proj-title">To‑Do App (JS)</div>
+              <div style="font-size:13px;color:var(--muted)">GitHub • HTML/CSS/JS</div>
+            </div>
+            <div class="proj-desc">A simple To‑Do application with add, remove and persist to localStorage. Built to practise DOM manipulation.</div>
+            <div class="tags"><span class="tag">Beginner</span><span class="tag">DOM</span></div>
+          </div>
+
+          <div class="project">
+            <div class="proj-head">
+              <div class="proj-title">Weather UI</div>
+              <div style="font-size:13px;color:var(--muted)">API • Responsive</div>
+            </div>
+            <div class="proj-desc">A responsive UI that fetches weather data from an API and displays current conditions and forecast cards.</div>
+            <div class="tags"><span class="tag">API</span><span class="tag">Responsive</span></div>
+          </div>
+
+          <div class="project">
+            <div class="proj-head">
+              <div class="proj-title">Notes App (MERN - WIP)</div>
+              <div style="font-size:13px;color:var(--muted)">Backend • MongoDB</div>
+            </div>
+            <div class="proj-desc">Working on a notes app with user auth. This project shows backend and database basics.</div>
+            <div class="tags"><span class="tag">Backend</span><span class="tag">Auth</span></div>
+          </div>
+
+        </section>
+
+      </main>
+
+      <aside class="card">
+        <div class="profile">
+          <div class="avatar">HP</div>
+          <div style="font-weight:700">Hariom Patel</div>
+          <div class="about">3rd year engineering • Web developer • DSA learner</div>
+
+          <div class="contact-list" id="contact">
+            <div class="contact-item">Email: hp3432884@gmail.com</div>
+            <div class="contact-item">Location: India</div>
+            <div class="contact-item">GitHub: github.com/your-username</div>
+          </div>
+        </div>
+
+        <div style="margin-top:14px">
+          <h3 style="margin:0 0 8px 0">Quick Links</h3>
+          <div style="display:flex;flex-direction:column;gap:8px">
+            <a class="contact-item" href="#projects">View Projects</a>
+            <a class="contact-item" href="https://github.com/your-username" target="_blank">Open GitHub</a>
+            <a class="contact-item" href="mailto:hp3432884@gmail.com">Email me</a>
+          </div>
+        </div>
+      </aside>
+    </div>
+
+    <footer>
+      Built with ❤️ • Replace content to personalise • Tip: commit this file to GitHub as index.html
+    </footer>
+  </div>
+</body>
+</html>
